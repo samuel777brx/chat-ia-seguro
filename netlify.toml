@@ -1,0 +1,13 @@
+[build]
+  base = "/"
+  command = "pnpm --filter @workspace/chat-ia run build"
+  publish = "artifacts/chat-ia/dist/public"
+
+[build.environment]
+  BASE_PATH = "/"
+  PORT = "23007"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
